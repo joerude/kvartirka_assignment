@@ -27,7 +27,7 @@
 
 ## Документация
 Документация API была создана с помощью библиотеки `drf-yasg` и описана в формате Swagger/OpenAPI.
-Файлы находится в `kvartirka-api-test/docs/` в форматах **json** и **yaml**
+Файлы находятся в `kvartirka-api-test/docs/` в форматах **json** и **yaml**
 
 <hr>
 
