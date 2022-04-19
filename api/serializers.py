@@ -1,7 +1,7 @@
 from mptt.templatetags.mptt_tags import cache_tree_children
 from rest_framework import serializers
 
-from test_django import settings
+from kvartirka_api_test import settings
 
 from .models import Blog, Comment
 
