@@ -67,8 +67,11 @@ python manage.py runserver
 ```
 
 ## Реализация
+База данных: **PostgreSQL** <br>
 Для реализации дерева комментариев использовалась структура 
 данных MPTT (Modified Preorder Tree Traversal), а именно пакет `django-mptt`.
+
+
 ## Деплой
 Ссылка: 
 **https://joerude-test-comment-api.herokuapp.com/**
