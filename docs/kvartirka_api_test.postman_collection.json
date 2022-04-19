@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "f370ce47-b131-4995-a8cb-45b0171de01a",
+		"name": "kvartirka_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List of all comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/comments/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"comments",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of all blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/blogs/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail of single blog instance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/blogs/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"blogs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail of single comment instance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/comments/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"comments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new blog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": [\n        \"Обязательное поле.\"\n    ],\n    \"text\": [\n        \"Обязательное поле.\"\n    ],\n    \"user\": [\n        \"Обязательное поле.\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/create_blog/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"create_blog",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/create_comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"create_comment",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
