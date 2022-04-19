@@ -1,0 +1,312 @@
+swagger: '2.0'
+info:
+  title: Snippets API
+  description: Test description
+  termsOfService: 'https://www.google.com/policies/terms/'
+  contact:
+    email: contact@snippets.local
+  license:
+    name: BSD License
+  version: v1
+host: '127.0.0.1:8000'
+schemes:
+  - http
+basePath: /api/v1
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /blogs/:
+    get:
+      operationId: blogs_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Blog'
+      tags:
+        - blogs
+    post:
+      operationId: blogs_create
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Blog'
+      tags:
+        - blogs
+    parameters: []
+  '/blogs/{id}/':
+    get:
+      operationId: blogs_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Blog'
+      tags:
+        - blogs
+    put:
+      operationId: blogs_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Blog'
+      tags:
+        - blogs
+    patch:
+      operationId: blogs_partial_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Blog'
+      tags:
+        - blogs
+    delete:
+      operationId: blogs_delete
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - blogs
+    parameters:
+      - name: id
+        in: path
+        description: A unique integer value identifying this blog.
+        required: true
+        type: integer
+  /comments/:
+    get:
+      operationId: comments_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Comment'
+      tags:
+        - comments
+    post:
+      operationId: comments_create
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Comment'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Comment'
+      tags:
+        - comments
+    parameters: []
+  '/comments/{id}/':
+    get:
+      operationId: comments_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Comment'
+      tags:
+        - comments
+    put:
+      operationId: comments_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Comment'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Comment'
+      tags:
+        - comments
+    patch:
+      operationId: comments_partial_update
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Comment'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Comment'
+      tags:
+        - comments
+    delete:
+      operationId: comments_delete
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - comments
+    parameters:
+      - name: id
+        in: path
+        description: A unique integer value identifying this comment.
+        required: true
+        type: integer
+  /create_blog/:
+    post:
+      operationId: create_blog_create
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Blog'
+      tags:
+        - create_blog
+    parameters: []
+  /create_comment/:
+    post:
+      operationId: create_comment_create
+      description: ''
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Comment'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Comment'
+      tags:
+        - create_comment
+    parameters: []
+definitions:
+  Blog:
+    required:
+      - title
+      - text
+      - user
+    type: object
+    properties:
+      id:
+        title: ID
+        type: integer
+        readOnly: true
+      comments:
+        title: Comments
+        type: string
+        readOnly: true
+      title:
+        title: Title
+        type: string
+        maxLength: 100
+        minLength: 1
+      text:
+        title: Text
+        type: string
+        maxLength: 500
+        minLength: 1
+      created_at:
+        title: Created at
+        type: string
+        format: date-time
+        readOnly: true
+      user:
+        title: User
+        type: integer
+  Comment:
+    required:
+      - blog
+      - text
+      - user
+    type: object
+    properties:
+      id:
+        title: ID
+        type: integer
+        readOnly: true
+      blog:
+        title: Blog
+        type: integer
+      parent:
+        title: Parent
+        type: integer
+      children:
+        title: Children
+        type: string
+        readOnly: true
+      text:
+        title: Text
+        type: string
+        maxLength: 300
+        minLength: 1
+      created_at:
+        title: Created at
+        type: string
+        format: date-time
+        readOnly: true
+      level:
+        title: Level
+        type: integer
+        readOnly: true
+      user:
+        title: User
+        type: integer
