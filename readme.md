@@ -27,7 +27,7 @@
 
 ## Документация
 Документация API была создана с помощью библиотеки `drf-yasg` и описана в формате Swagger/OpenAPI.
-Находится в `comment_tree_api/docs/` в форматах **json** и **yaml**
+Находится в `kvartirka-api-test/docs/` в форматах **json** и **yaml**
 
 <hr>
 
