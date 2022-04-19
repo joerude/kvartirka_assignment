@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from mptt.templatetags.mptt_tags import cache_tree_children  # type: ignore
 from rest_framework import status, viewsets
 from rest_framework.generics import CreateAPIView
@@ -30,3 +31,7 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+
+def index(request):
+    return render(request, template_name='index.html')
