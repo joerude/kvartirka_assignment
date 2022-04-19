@@ -66,9 +66,12 @@ python3 manage.py dump.json
 python manage.py runserver
 ```
 
-
+## Реализация
+Для реализации дерева комментариев использовалась структура 
+данных MPTT (Modified Preorder Tree Traversal), а именно пакет `django-mptt`.
 ## Деплой
-Ссылка: https://welbex-frontend.herokuapp.com/
+Ссылка: 
+**https://joerude-test-comment-api.herokuapp.com/**
 
 
 
