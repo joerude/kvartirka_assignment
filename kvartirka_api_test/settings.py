@@ -10,11 +10,8 @@ DEBUG = config('DEBUG', cast=bool)
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-# ALLOWED_HOSTS = ['guarded-cliffs-81232.herokuapp.com',
-#                  '127.0.0.1']
-
-
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['joerude-test-comment-api.herokuapp.com',
+                 '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

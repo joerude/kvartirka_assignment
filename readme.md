@@ -67,7 +67,8 @@ python manage.py runserver
 ```
 
 
-
+## Деплой
+Ссылка: https://welbex-frontend.herokuapp.com/
 
 
 
