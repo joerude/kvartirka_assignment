@@ -74,8 +74,8 @@ python manage.py runserver
 
 
 ## Деплой
-Ссылка: 
-**https://joerude-test-comment-api.herokuapp.com/**
+Проект был залит на Heroku
+<p><b>Ссылка: https://joerude-test-comment-api.herokuapp.com/</b></p>
 
 
 
