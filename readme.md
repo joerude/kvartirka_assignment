@@ -33,7 +33,8 @@
 ## Документация
 
 Документация API была создана с помощью библиотеки `drf-yasg` и описана в формате Swagger/OpenAPI.
-Файлы находятся в `kvartirka_api_test/docs/` в форматах **json** и **yaml**
+Файлы находятся в `kvartirka_api_test/docs/` в форматах **json** и **yaml** <br>
+Также документация API доступна тут: **https://joerude-test-comment-api.herokuapp.com/swagger/**
 
 <hr>
 
