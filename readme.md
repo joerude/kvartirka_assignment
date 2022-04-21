@@ -46,6 +46,8 @@ git clone https://github.com/joerude/kvartirka_api_test
 cd kvartirka_api_test
 ```
 
+<p>В файле **.env** перезапишите конфигурации вашей базы данных Postgres </p> 
+
 Установите **poetry** для osx/linux/bash on windows:
 
 ```
