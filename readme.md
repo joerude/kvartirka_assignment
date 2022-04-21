@@ -48,7 +48,10 @@ cd kvartirka_api_test
 
 <p>В файле <b>.env</b> перезапишите конфигурации вашей базы данных Postgres (имя пользователя, пароль, название БД) </p> 
 
-Установите **poetry** для osx/linux/bash on windows:
+Установите **poetry**
+`pip install poetry`
+
+для osx/linux/bash on windows:
 
 ```
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
